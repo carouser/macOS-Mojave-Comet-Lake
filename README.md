@@ -9,7 +9,7 @@ The list of hardware:
 | HW | Details |
 | --- | --- |
 | CPU | Intel i5-10400 |
-| MB | ASUS H470-I |
+| MB | [ASUS H470-I GAMING](https://www.asus.com/Motherboards/ROG-STRIX-H470-I-GAMING/) |
 | RAM | CORSAIR DDR4-2666 16 GB x 2 |
 | HDD | Seagate 2.5" 7200rpm 320GB |
 | SSD | Samsung 970 EVO SATA 1TB |
@@ -18,11 +18,11 @@ The list of hardware:
 
 Luckily Mojave does include support for Macmini8,1 which sports a pretty similar CPU (i7-8700B).
 
-OpenCore 0.6.1 -- https://github.com/acidanthera/OpenCorePkg/releases
+[OpenCore 0.6.1](https://github.com/acidanthera/OpenCorePkg/releases) -- up to date bootloader
 
-Excellent guide -- https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html
+[Dortania Project](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html) -- excellent guide
 
-BT Link Key export / import guide -- https://github.com/Soorma07/OS-X-Bluetooth-Pairing-Value-To-Windows-Value
+macOS / Windows BT pairing procedure -- mostly from [Soorma07](https://github.com/Soorma07/OS-X-Bluetooth-Pairing-Value-To-Windows-Value):
 
 	-- Download PsExec (command line tool from Sysinternals package) to access registry as SYSTEM:
 		https://docs.microsoft.com/en-us/sysinternals/downloads/psexec;
