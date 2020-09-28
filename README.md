@@ -14,7 +14,7 @@ The list of hardware:
 | HDD | [ST9320423AS](https://www.seagate.com/staticfiles/support/disc/manuals/notebook/momentus/7200.4%20(Holliday)/100534376a.pdf) -- Seagate 2.5" 7200rpm 320GB SATA3 |
 | SSD | [MZ-76E1T0BW](https://www.samsung.com/semiconductor/minisite/ssd/product/consumer/860evo/) -- Samsung 860 EVO 1TB SATA6 |
 | PSU | OCZ550FTY |
-| CASE | [Thermaltake F1 Supressor](https://www.thermaltake.com/suppressor-f1.html) |
+| CASE | [CA-1E6-00S1WN-00](https://www.thermaltake.com/suppressor-f1.html) -- Thermaltake F1 Supressor |
 
 Luckily Mojave does include support for Macmini8,1 which sports a pretty similar CPU [i7-8700B](https://ark.intel.com/content/www/us/en/ark/products/134905/intel-core-i7-8700b-processor-12m-cache-up-to-4-60-ghz.html).
 
