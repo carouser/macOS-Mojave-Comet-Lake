@@ -8,8 +8,8 @@ The list of hardware:
 
 | HW | Details | P/N |
 | --- | --- | --- |
-| CPU | Intel [i5-10400](https://ark.intel.com/content/www/us/en/ark/products/199271/intel-core-i5-10400-processor-12m-cache-up-to-4-30-ghz.html) | |
-| MB | [ASUS H470-I GAMING](https://www.asus.com/Motherboards/ROG-STRIX-H470-I-GAMING/) | |
+| CPU | Intel 6C-12T-12M-2.9GHz-4.3GHz | [i5-10400](https://ark.intel.com/content/www/us/en/ark/products/199271/intel-core-i5-10400-processor-12m-cache-up-to-4-30-ghz.html) |
+| MB | ASUS ROG STRIX H470-I GAMING | [H470-I](https://www.asus.com/Motherboards/ROG-STRIX-H470-I-GAMING/) |
 | RAM | Crucial Ballistix DDR4-2666 16GB x 2 | [BL2K16G26C16U4B](https://www.crucial.com/memory/ddr4/bl2k16g26c16u4b) |
 | HDD | Seagate 2.5" 7200rpm 320GB SATA3 | [ST9320423AS](https://www.seagate.com/staticfiles/support/disc/manuals/notebook/momentus/7200.4%20(Holliday)/100534376a.pdf) |
 | SSD | Samsung 860 EVO 1TB SATA6 | [MZ-76E1T0BW](https://www.samsung.com/semiconductor/minisite/ssd/product/consumer/860evo/) |
