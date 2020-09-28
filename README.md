@@ -7,7 +7,7 @@ Unfortunately the latest Catalina release 10.15.6 proved to have numerous annoyi
 The list of hardware:
 
 	CPU:	Intel i5-10400 (BOX)
-	MB:		ASUS H470-I (ITX)
+	MB:	ASUS H470-I (ITX)
 	RAM:	CORSAIR DDR4-2666 16 GB x 2
 	HDD:	Seagate 2.5" 7200rpm 320GB
 	SSD:	Samsung 970 EVO SATA 1TB
