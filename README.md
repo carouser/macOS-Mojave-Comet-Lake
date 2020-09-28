@@ -25,10 +25,11 @@ Excellent guide -- https://dortania.github.io/OpenCore-Install-Guide/config.plis
 
 BT Link Key export / import guide -- https://github.com/Soorma07/OS-X-Bluetooth-Pairing-Value-To-Windows-Value
 
-	Download PSEXEC utility to access registry as SYSTEM;
-	Pair BT device
-	Run "psexec -s -i regedit" with as Administrator and export the key:
+	-- Download PsExec (command line tool from Sysinternals package) to access registry as SYSTEM:
+		https://docs.microsoft.com/en-us/sysinternals/downloads/psexec;
+	-- Pair BT device
+	-- Run "psexec -s -i regedit" with as Administrator and export the key:
 		HKLM\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Keys\BD_ADDR
-	Reverse the byte order for the key (00010203 04050607 08090a0b 0c0d0e0f > 0f0e0d0c 0b0a0908 07060504 03020100)
-	Reboot to macOS and import the key:
-		sudo defaults read /private/var/root/Library/Preferences/com.apple.bluetoothd.plist LinkKeys
+	-- Reverse the byte order for the key (00010203 04050607 08090a0b 0c0d0e0f > 0f0e0d0c 0b0a0908 07060504 03020100)
+	-- Reboot to macOS and import the key:
+		sudo defaults write /private/var/root/Library/Preferences/com.apple.bluetoothd.plist LinkKeys
