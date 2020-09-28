@@ -6,16 +6,16 @@ Unfortunately the latest Catalina release 10.15.6 proved to have numerous annoyi
 
 The list of hardware:
 
-CPU:	Intel i5-10400 (BOX)
-MB:	  ASUS H470-I (ITX)
-RAM:	CORSAIR DDR4-2666 16 GB x 2
-HDD:	Seagate 2.5" 7200rpm 320GB
-SSD*:	Samsung 970 EVO NVME 500GB
-SSD:	Samsung 970 EVO SATA 1TB
-PSU:  OCZ 470
-GPU*: ASUS NVIDIA 1650 SUPER
-CASE:	Thermaltake F1 Supressor
-*used with Windows 10 only
+	CPU:	Intel i5-10400 (BOX)
+	MB:		ASUS H470-I (ITX)
+	RAM:	CORSAIR DDR4-2666 16 GB x 2
+	HDD:	Seagate 2.5" 7200rpm 320GB
+	SSD:	Samsung 970 EVO SATA 1TB
+	PSU:	OCZ 470
+	CASE:	Thermaltake F1 Supressor
+	GPU*:	ASUS NVIDIA 1650 SUPER
+	SSD*:	Samsung 970 EVO NVME 500GB
+	*used with Windows 10 only
 
 Luckily Mojave does include support for Macmini8,1 which sports a pretty similar CPU (i7-8700B).
 
