@@ -8,15 +8,15 @@ The list of hardware:
 
 | HW | Details |
 | --- | --- |
-| CPU | Intel i5-10400 |
+| CPU | Intel [i5-10400](https://ark.intel.com/content/www/us/en/ark/products/199271/intel-core-i5-10400-processor-12m-cache-up-to-4-30-ghz.html) |
 | MB | [ASUS H470-I GAMING](https://www.asus.com/Motherboards/ROG-STRIX-H470-I-GAMING/) |
-| RAM | CORSAIR DDR4-2666 16 GB x 2 |
+| RAM | CORSAIR [BL2K16G26C16U4B](https://www.crucial.com/memory/ddr4/bl2k16g26c16u4b) 2 x DDR4-2666 16GB |
 | HDD | Seagate 2.5" 7200rpm 320GB |
 | SSD | Samsung 970 EVO SATA 1TB |
 | PSU | OCZ 470 |
 | CASE | Thermaltake F1 Supressor |
 
-Luckily Mojave does include support for Macmini8,1 which sports a pretty similar CPU (i7-8700B).
+Luckily Mojave does include support for Macmini8,1 which sports a pretty similar CPU [i7-8700B](https://ark.intel.com/content/www/us/en/ark/products/134905/intel-core-i7-8700b-processor-12m-cache-up-to-4-60-ghz.html).
 
 [OpenCore 0.6.1](https://github.com/acidanthera/OpenCorePkg/releases) -- up to date bootloader
 
