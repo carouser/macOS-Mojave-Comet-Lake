@@ -33,3 +33,5 @@ macOS / Windows BT pairing procedure -- mostly from [Soorma07](https://github.co
 	`sudo defaults read /private/var/root/Library/Preferences/com.apple.bluetoothd.plist LinkKeys`
 6.	Replace the key value in the original REG-file with the one from macOS -- use reversed byte order, i.e.
 	`00010203 04050607 08090a0b 0c0d0e0f` > `0f0e0d0c 0b0a0908 07060504 03020100`
+
+![Pretty good case for the money](https://thermaltake.azureedge.net/pub/media/catalog/product/cache/25e62158742be0ef47d2055284094406/db/imgs/pdt/gallery/CA-1E6-00S1WN-00_8f69b8e1d8f149b89087f802f5a29e35.jpg)
