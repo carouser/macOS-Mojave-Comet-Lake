@@ -1,6 +1,6 @@
 # macOS-Mojave-Comet-Lake
 
-This guideline covers specifics of macOS installation on the most recent Comet Lake CPUs (https://ark.intel.com/content/www/ru/ru/ark/products/codename/90354/comet-lake.html).
+This guideline covers specifics of macOS installation on the most recent [Comet Lake](https://ark.intel.com/content/www/ru/ru/ark/products/codename/90354/comet-lake.html) CPUs.
 
 Unfortunately the latest Catalina release 10.15.6 proved to have numerous annoying bugs and issues. Since it also lacks 32-bit support while not offering any deal-breaking features the previous Mojave 10.14.6 release appears preferable for the time being.
 
