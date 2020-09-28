@@ -870,17 +870,17 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>MLB</string>
+			<string>XXX</string>
 			<key>ROM</key>
-			<data>ROM</data>
+			<data>XXX</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
 			<string>Macmini8,1</string>
 			<key>SystemSerialNumber</key>
-			<string>SSN</string>
+			<string>XXX</string>
 			<key>SystemUUID</key>
-			<string>SUUID</string>
+			<string>XXX</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
