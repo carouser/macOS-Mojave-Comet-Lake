@@ -24,10 +24,10 @@ Luckily Mojave does include support for Macmini8,1 which sports a pretty similar
 
 macOS / Windows BT pairing procedure -- mostly from [Soorma07](https://github.com/Soorma07/OS-X-Bluetooth-Pairing-Value-To-Windows-Value):
 
-	-- Download [PsExec](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec) command line tool from Sysinternals package to access registry as SYSTEM
-	-- Boot to Windows 10 and pair BT device
-	-- Run "psexec -s -i regedit" as Administrator and export the key from `HKLM\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Keys\BD_ADDR`
-	-- Reboot to macOS and pair BT device
-	-- Export the the key `sudo defaults read /private/var/root/Library/Preferences/com.apple.bluetoothd.plist LinkKeys`
-	-- Modify the key value in the original REG-file -- user reversed byte order, i.e.:
+1.	Download [PsExec](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec) command line tool from Sysinternals package to access registry as SYSTEM
+2.	Boot to Windows 10 and pair BT device
+3.	Run "psexec -s -i regedit" as Administrator and export the key from `HKLM\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Keys\BD_ADDR`
+4.	Reboot to macOS and pair BT device
+5.	Export the the key `sudo defaults read /private/var/root/Library/Preferences/com.apple.bluetoothd.plist LinkKeys`
+6.	Modify the key value in the original REG-file -- user reversed byte order, i.e.:
 		`00010203 04050607 08090a0b 0c0d0e0f` > `0f0e0d0c 0b0a0908 07060504 03020100`
