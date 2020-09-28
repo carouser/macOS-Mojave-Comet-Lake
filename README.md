@@ -30,6 +30,9 @@ BT Link Key export / import guide -- https://github.com/Soorma07/OS-X-Bluetooth-
 	-- Pair BT device
 	-- Run "psexec -s -i regedit" with as Administrator and export the key:
 		HKLM\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Keys\BD_ADDR
-	-- Reverse the byte order for the key (00010203 04050607 08090a0b 0c0d0e0f > 0f0e0d0c 0b0a0908 07060504 03020100)
-	-- Reboot to macOS and import the key:
-		sudo defaults write /private/var/root/Library/Preferences/com.apple.bluetoothd.plist LinkKeys
+	-- Reverse the byte order for the key and create a REG-file (00010203 04050607 08090a0b 0c0d0e0f > 0f0e0d0c 0b0a0908 07060504 03020100)
+	-- Reboot to macOS and pair BT device
+	-- Export the the key:
+		sudo defaults read /private/var/root/Library/Preferences/com.apple.bluetoothd.plist LinkKeys
+	-- Modify the key value in the original REG-file -- user reversed byte order, i.e.:
+		00010203 04050607 08090a0b 0c0d0e0f > 0f0e0d0c 0b0a0908 07060504 03020100
