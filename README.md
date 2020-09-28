@@ -11,10 +11,10 @@ The list of hardware:
 | CPU | Intel [i5-10400](https://ark.intel.com/content/www/us/en/ark/products/199271/intel-core-i5-10400-processor-12m-cache-up-to-4-30-ghz.html) |
 | MB | [ASUS H470-I GAMING](https://www.asus.com/Motherboards/ROG-STRIX-H470-I-GAMING/) |
 | RAM | [BL2K16G26C16U4B](https://www.crucial.com/memory/ddr4/bl2k16g26c16u4b) -- Crucial Ballistix DDR4-2666 16GB x 2 |
-| HDD | [ST9320423AS](https://www.seagate.com/staticfiles/support/disc/manuals/notebook/momentus/7200.4%20(Holliday)/100534376a.pdf) -- Seagate 2.5" 7200rpm 320GB |
-| SSD | [MZ-76E1T0BW](https://www.samsung.com/semiconductor/minisite/ssd/product/consumer/860evo/) -- Samsung 860 EVO SATA 1TB |
+| HDD | [ST9320423AS](https://www.seagate.com/staticfiles/support/disc/manuals/notebook/momentus/7200.4%20(Holliday)/100534376a.pdf) -- Seagate 2.5" 7200rpm 320GB SATA3 |
+| SSD | [MZ-76E1T0BW](https://www.samsung.com/semiconductor/minisite/ssd/product/consumer/860evo/) -- Samsung 860 EVO 1TB SATA6 |
 | PSU | OCZ550FTY |
-| CASE | Thermaltake F1 Supressor |
+| CASE | [Thermaltake F1 Supressor](https://www.thermaltake.com/suppressor-f1.html) |
 
 Luckily Mojave does include support for Macmini8,1 which sports a pretty similar CPU [i7-8700B](https://ark.intel.com/content/www/us/en/ark/products/134905/intel-core-i7-8700b-processor-12m-cache-up-to-4-60-ghz.html).
 
