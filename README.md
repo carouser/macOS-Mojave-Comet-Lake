@@ -18,6 +18,8 @@ The list of hardware:
 
 Luckily Mojave does include support for Macmini8,1 which sports a pretty similar CPU [i7-8700B](https://ark.intel.com/content/www/us/en/ark/products/134905/intel-core-i7-8700b-processor-12m-cache-up-to-4-60-ghz.html).
 
+![About This Mac](./ATM-10.14.6.png)
+
 [OpenCore 0.6.1](https://github.com/acidanthera/OpenCorePkg/releases) -- up to date bootloader
 
 [Dortania Project](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html) -- excellent guide
