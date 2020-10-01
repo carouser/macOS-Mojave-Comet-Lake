@@ -1,6 +1,10 @@
 # macOS-Mojave-Comet-Lake
 
-This guideline covers specifics of macOS installation on the most recent [Comet Lake](https://ark.intel.com/content/www/ru/ru/ark/products/codename/90354/comet-lake.html) CPUs.
+Is there a reason to pay $1900 for Mac mini 2018 if a very similar system can be build 1/3 of the price with a possibility to install a pretty descent dGPU?
+
+Let us know if you are fond of soldered SSD and a generous option of upgrading from 8GB DDR4-2666 to 32GB for $600.
+
+This guideline covers specifics of macOS installation on a system with recent [Comet Lake](https://ark.intel.com/content/www/ru/ru/ark/products/codename/90354/comet-lake.html) CPUs.
 
 Unfortunately the latest Catalina release 10.15.6 proved to have numerous annoying bugs and issues. Since it also lacks 32-bit support while not offering any deal-breaking features the previous Mojave 10.14.6 release appears preferable for the time being.
 
@@ -16,7 +20,7 @@ The list of hardware:
 | PSU | OCZ 550W | OCZ550FTY |
 | CASE | Thermaltake F1 Supressor | [CA-1E6-00S1WN-00](https://www.thermaltake.com/suppressor-f1.html) |
 
-Luckily Mojave does include support for Macmini8,1 which sports a pretty similar CPU [i7-8700B](https://ark.intel.com/content/www/us/en/ark/products/134905/intel-core-i7-8700b-processor-12m-cache-up-to-4-60-ghz.html).
+Luckily Mojave does include support for Macmini8,1 which sports a pretty similar (aside from extra 300Mhz) Coffee Lake CPU -- 6C-12T-12M-3.2GHz-4.6GHz -- [i7-8700B](https://ark.intel.com/content/www/us/en/ark/products/134905/intel-core-i7-8700b-processor-12m-cache-up-to-4-60-ghz.html).
 
 ![About This Mac](./ATM-10.14.6.png)
 
