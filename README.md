@@ -1,8 +1,8 @@
 # macOS-Mojave-Comet-Lake
 
-Is there a reason to pay $1900 for Mac mini 2018 if a very similar system can be build 1/3 of the price with a possibility to install a pretty descent dGPU?
+Is there a reason to pay $1900 for Mac mini 2018 if a very similar system can be build for 1/3 of the price with a possibility to install a pretty descent dGPU?
 
-Let us know if you are fond of soldered SSD and a generous option of upgrading from 8GB DDR4-2666 to 32GB for $600.
+Let us know if you are fond of soldered SSD and a generous option of upgrading from 8GB DDR4-2666 to 32GB for $600 😃
 
 This guideline covers specifics of macOS installation on a system with recent [Comet Lake](https://ark.intel.com/content/www/ru/ru/ark/products/codename/90354/comet-lake.html) CPUs.
 
@@ -20,15 +20,15 @@ The list of hardware:
 | PSU | OCZ 550W | OCZ550FTY |
 | CASE | Thermaltake F1 Supressor | [CA-1E6-00S1WN-00](https://www.thermaltake.com/suppressor-f1.html) |
 
-Luckily Mojave does include support for Macmini8,1 which sports a pretty similar (aside from extra 300Mhz) Coffee Lake CPU -- 6C-12T-12M-3.2GHz-4.6GHz -- [i7-8700B](https://ark.intel.com/content/www/us/en/ark/products/134905/intel-core-i7-8700b-processor-12m-cache-up-to-4-60-ghz.html).
+Luckily Mojave does include support for Macmini8,1 which sports a pretty similar (aside from extra 300Mhz) Coffee Lake CPU — 6C-12T-12M-3.2GHz-4.6GHz — [i7-8700B](https://ark.intel.com/content/www/us/en/ark/products/134905/intel-core-i7-8700b-processor-12m-cache-up-to-4-60-ghz.html).
 
 ![About This Mac](./ATM-10.14.6.png)
 
-[OpenCore 0.6.1](https://github.com/acidanthera/OpenCorePkg/releases) -- up to date bootloader
+[OpenCore 0.6.1](https://github.com/acidanthera/OpenCorePkg/releases) — up to date bootloader
 
-[Dortania Project](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html) -- excellent guide
+[Dortania Project](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html) — excellent guide
 
-macOS / Windows BT pairing procedure -- mostly from [Soorma07](https://github.com/Soorma07/OS-X-Bluetooth-Pairing-Value-To-Windows-Value):
+macOS / Windows BT pairing procedure — mostly from [Soorma07](https://github.com/Soorma07/OS-X-Bluetooth-Pairing-Value-To-Windows-Value):
 
 1.	Download [PsExec](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec) command line tool from Sysinternals package to access registry as SYSTEM
 2.	Boot to Windows 10 and pair BT device
@@ -37,7 +37,7 @@ macOS / Windows BT pairing procedure -- mostly from [Soorma07](https://github.co
 4.	Reboot to macOS and pair BT device
 5.	Export the the key:
 	`sudo defaults read /private/var/root/Library/Preferences/com.apple.bluetoothd.plist LinkKeys`
-6.	Replace the key value in the original REG-file with the one from macOS -- use reversed byte order, i.e.
+6.	Replace the key value in the original REG-file with the one from macOS — use reversed byte order, i.e.
 	`00010203 04050607 08090a0b 0c0d0e0f` > `0f0e0d0c 0b0a0908 07060504 03020100`
 
 ![Pretty good case for the money](https://thermaltake.azureedge.net/pub/media/catalog/product/cache/25e62158742be0ef47d2055284094406/db/imgs/pdt/gallery/CA-1E6-00S1WN-00_8f69b8e1d8f149b89087f802f5a29e35.jpg)
