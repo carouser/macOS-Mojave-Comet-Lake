@@ -1,6 +1,6 @@
 # macOS-Mojave-Comet-Lake
 
-Is there a reason to pay $1900 for Mac mini 2018 if a very similar system can be build for 1/3 of the price with a possibility to install a pretty descent dGPU?
+Is there any reason to pay $1900 for Mac mini 2018 if a very similar system can be build for 1/3 of the price with a possibility to install a pretty decent dGPU?
 
 Let us know if you are fond of soldered SSD and a generous option of upgrading from 8GB DDR4-2666 to 32GB for $600 😃
 
