@@ -56,7 +56,8 @@ Mostly extracted from [Soorma07](https://github.com/Soorma07/OS-X-Bluetooth-Pair
 
 ### /Library/LaunchDaemons/8gb.ramdisk.attach.plist
 
-```<?xml version="1.0" encoding="UTF-8"?>
+```
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 	<dict>
@@ -117,7 +118,8 @@ diskutil erasevolume HFS+ "ramdisk" ${RAMDISK}
 
 ### /usr/local/8gb.mount.sh
 
-```#!/bin/sh
+```
+#!/bin/sh
 
 RAMDISK=`cat /tmp/.ramdisk.id`
 
