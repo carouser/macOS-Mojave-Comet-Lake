@@ -130,4 +130,10 @@ mkdir /Volumes/ramdisk/tmp
 
 ---
 
+To prevent Safari from keeping cache -- clean up and lock up the following directories:
+
+~/Library/Safari/LocalStorage/
+~/Library/Safari/Databases/
+~/Library/Containers/com.apple.Safari/Data/Library/Caches/
+
 ![BTW, pretty good case for the money](https://thermaltake.azureedge.net/pub/media/catalog/product/cache/25e62158742be0ef47d2055284094406/db/imgs/pdt/gallery/CA-1E6-00S1WN-00_8f69b8e1d8f149b89087f802f5a29e35.jpg)
