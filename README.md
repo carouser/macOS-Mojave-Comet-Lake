@@ -141,3 +141,40 @@ mkdir /Volumes/ramdisk/tmp
 ---
 
 ![BTW, pretty good case for the money](https://thermaltake.azureedge.net/pub/media/catalog/product/cache/25e62158742be0ef47d2055284094406/db/imgs/pdt/gallery/CA-1E6-00S1WN-00_8f69b8e1d8f149b89087f802f5a29e35.jpg)
+
+---
+
+diskutil list
+
+```
+/dev/disk5 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *500.1 GB   disk5
+   1:                        EFI EFI_T7                  209.7 MB   disk5s1
+   2:                 Apple_APFS Container disk6         499.0 GB   disk5s2
+
+/dev/disk6 (synthesized):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      APFS Container Scheme -                      +499.0 GB   disk6
+                                 Physical Store disk5s2
+   1:                APFS Volume T7                      905.2 KB   disk6s1
+```
+
+diskutil apfs resizeContainer disk6 400g
+
+https://support.apple.com/en-us/HT211683
+
+Catalina:
+https://apps.apple.com/ru/app/macos-catalina/id1466841314?l=en&mt=12
+
+
+https://support.apple.com/en-us/HT201372
+
+Big Sur:
+sudo /Applications/Install\ macOS\ Big\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
+
+Catalina:
+sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
+
+Mojave:
+sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
