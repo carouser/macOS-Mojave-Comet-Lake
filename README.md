@@ -180,10 +180,8 @@ Mojave:
 sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
 
 
-```
-How to obtain FREE version of NTFS for Mac by Paragon Software:
+## FREE edition of NTFS for Mac by Paragon Software from Seagate website
 
 https://www.seagate.com/ru/ru/support/software/paragon/
 
-direct link -- 10.10 - 10.15 -- https://www.seagate.com/files/www-content/support-content/external-products/backup-plus/_shared/downloads/NTFS_Paragon_Driver.dmg
-```
+A direct link to version [5.15.90](https://www.seagate.com/files/www-content/support-content/external-products/backup-plus/_shared/downloads/NTFS_Paragon_Driver.dmg)
