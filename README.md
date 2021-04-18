@@ -52,32 +52,9 @@ Mostly extracted from [Soorma07](https://github.com/Soorma07/OS-X-Bluetooth-Pair
 
 ---
 
-## 8GB RAMDisk
+## 8GB RAMDisk automount at user login
 
-### /Library/LaunchDaemons/8gb.ramdisk.attach.plist
-
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-	<dict>
-		<key>Label</key>
-		<string>8gb.ramdisk.attach</string>
-		<key>Program</key>
-		<string>/usr/local/8gb.attach.sh</string>
-		<key>RunAtLoad</key>
-		<true/>
-		<key>StandardErrorPath</key>
-		<string>/dev/null</string>
-		<key>StandardOutPath</key>
-		<string>/dev/null</string>
-		<key>Disabled</key>
-		<false/>
-	</dict>
-</plist>
-```
-
-### /Library/LaunchAgents/8gb.ramdisk.mount.plist
+### /Library/LaunchAgents/8gb.ramdisk.plist
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -87,7 +64,7 @@ Mostly extracted from [Soorma07](https://github.com/Soorma07/OS-X-Bluetooth-Pair
 		<key>Label</key>
 		<string>8gb.ramdisk.mount</string>
 		<key>Program</key>
-		<string>/usr/local/8gb.mount.sh</string>
+		<string>/usr/local/8gb.ramdisk.sh</string>
 		<key>RunAtLoad</key>
 		<true/>
 		<key>StandardErrorPath</key>
@@ -100,7 +77,7 @@ Mostly extracted from [Soorma07](https://github.com/Soorma07/OS-X-Bluetooth-Pair
 </plist>
 ```
 
-### /usr/local/8gb.attach.sh
+### /usr/local/8gb.ramdisk.sh
 
 ```
 #!/bin/sh
@@ -113,17 +90,7 @@ fi
 
 RAMDISK=$(hdiutil attach -nomount -owners off ram://25165824)
 echo ${RAMDISK} > /tmp/.ramdisk.id
-diskutil erasevolume HFS+ "ramdisk" ${RAMDISK}
-```
-
-### /usr/local/8gb.mount.sh
-
-```
-#!/bin/sh
-
-RAMDISK=`cat /tmp/.ramdisk.id`
-
-diskutil mount ${RAMDISK}
+diskutil erasevolume ExFAT "ramdisk" ${RAMDISK}
 
 mkdir /Volumes/ramdisk/tmp
 ```
@@ -144,6 +111,8 @@ mkdir /Volumes/ramdisk/tmp
 
 ---
 
+## Resizing APFS container to reserve some space for optimal SSD performance
+
 diskutil list
 
 ```
@@ -162,6 +131,10 @@ diskutil list
 
 diskutil apfs resizeContainer disk6 400g
 
+---
+
+### Creating a macOS bootable USB-drive
+
 https://support.apple.com/en-us/HT211683
 
 Catalina:
@@ -179,15 +152,30 @@ sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstall
 Mojave:
 sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
 
+---
 
-## FREE edition of NTFS for Mac by Paragon Software from Seagate website
+### FREE edition of NTFS for Mac by Paragon Software from Seagate website
 
 https://www.seagate.com/ru/ru/support/software/paragon/
 
 A direct link to version [5.15.90](https://www.seagate.com/files/www-content/support-content/external-products/backup-plus/_shared/downloads/NTFS_Paragon_Driver.dmg)
 
+---
 
-## Hiding unwanted partitions on boot screen
+### Preventing auto-mount of any undesired partition with known UUID
+
+Use "diskutil list" to obtain "Volume UUID", then use "vifs" to safely edit /etc/fstab.
+
+Attention -- the only correct field separator is space (0x20).
+
+```
+UUID=Windows_10_UUID none ntfs noauto,ro
+UUID=Another_macOS_installation_UUID none apfs ro,noauto
+```
+
+---
+
+### Hiding undesired partitions on boot screen
 
 Set ScanPolicy to proper integer value, i.e. to boot from APFS and HFS partitions only from SATA drives:
 
