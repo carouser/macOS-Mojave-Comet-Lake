@@ -187,7 +187,7 @@ https://www.seagate.com/ru/ru/support/software/paragon/
 A direct link to version [5.15.90](https://www.seagate.com/files/www-content/support-content/external-products/backup-plus/_shared/downloads/NTFS_Paragon_Driver.dmg)
 
 
-##Hiding unwanted partitions
+## Hiding unwanted partitions on boot screen
 
 Set ScanPolicy to proper integer value, i.e. to boot from APFS and HFS partitions only from SATA drives:
 
