@@ -185,3 +185,47 @@ sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallme
 https://www.seagate.com/ru/ru/support/software/paragon/
 
 A direct link to version [5.15.90](https://www.seagate.com/files/www-content/support-content/external-products/backup-plus/_shared/downloads/NTFS_Paragon_Driver.dmg)
+
+
+##Hiding unwanted partitions
+
+Set ScanPolicy to proper integer value, i.e. to boot from APFS and HFS partitions only from SATA drives:
+
+66307 = 0x00010303 = 0x00000001 + 0x00000002 + 0x00000100 + 0x00000200 + 0x00010000
+
+```
+ScanPolicy
+Type: plist integer, 32 bit
+Failsafe: 0x10F0103
+Description: Define operating system detection policy.
+This value allows preventing scanning (and booting) untrusted sources based on a bitmask (sum) of a set of flags. As it is not possible to reliably detect every file system or device type, this feature cannot be fully relied upon in open environments, and additional measures are to be applied.
+Third party drivers may introduce additional security (and performance) consideratons following the provided scan policy. The active Scan policy is exposed in the scan-policy variable of 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102 GUID for UEFI Boot Services only.
+0x00000001 (bit 0) — OC_SCAN_FILE_SYSTEM_LOCK, restricts scanning to only known file systems defined as a part of this policy. File system drivers may not be aware of this policy. Hence, to avoid mounting of undesired file systems, drivers for such file systems should not be loaded. This bit does not affect DMG mounting, which may have any file system. Known file systems are prefixed with OC_SCAN_ALLOW_FS_.
+0x00000002 (bit 1) — OC_SCAN_DEVICE_LOCK, restricts scanning to only known device types defined as a part of this policy. It is not always possible to detect protocol tunneling, so be aware that on some systems, it may be possible for e.g. USB HDDs to be recognised as SATA instead. Cases like this must be reported. Known device types are prefixed with OC_SCAN_ALLOW_DEVICE_.
+0x00000100 (bit 8) — OC_SCAN_ALLOW_FS_APFS, allows scanning of APFS file system.
+0x00000200 (bit 9) — OC_SCAN_ALLOW_FS_HFS, allows scanning of HFS file system.
+0x00000400 (bit 10) — OC_SCAN_ALLOW_FS_ESP, allows scanning of EFI System Partition file system.
+0x00000800 (bit 11) — OC_SCAN_ALLOW_FS_NTFS, allows scanning of NTFS (Msft Basic Data) file system.
+0x00001000 (bit 12) — OC_SCAN_ALLOW_FS_EXT, allows scanning of EXT (Linux Root) file system.
+0x00010000 (bit 16) — OC_SCAN_ALLOW_DEVICE_SATA, allow scanning SATA devices.
+0x00020000 (bit 17) — OC_SCAN_ALLOW_DEVICE_SASEX, allow scanning SAS and Mac NVMe devices.
+0x00040000 (bit 18) — OC_SCAN_ALLOW_DEVICE_SCSI, allow scanning SCSI devices.
+0x00080000 (bit 19) — OC_SCAN_ALLOW_DEVICE_NVME, allow scanning NVMe devices.
+0x00100000 (bit 20) — OC_SCAN_ALLOW_DEVICE_ATAPI, allow scanning CD/DVD devices and old SATA.
+0x00200000 (bit 21) — OC_SCAN_ALLOW_DEVICE_USB, allow scanning USB devices.
+0x00400000 (bit 22) — OC_SCAN_ALLOW_DEVICE_FIREWIRE, allow scanning FireWire devices.
+0x00800000 (bit 23) — OC_SCAN_ALLOW_DEVICE_SDCARD, allow scanning card reader devices.
+0x01000000 (bit 24) — OC_SCAN_ALLOW_DEVICE_PCI, allow scanning devices directly connected to PCI bus (e.g. VIRTIO).
+Note: Given the above description, a value of 0xF0103 is expected to do the following:
+Permit scanning SATA, SAS, SCSI, and NVMe devices with APFS file systems.
+Prevent scanning any devices with HFS or FAT32 file systems.
+Prevent scanning APFS file systems on USB, CD, and FireWire drives.
+The combination reads as:
+OC_SCAN_FILE_SYSTEM_LOCK
+OC_SCAN_DEVICE_LOCK
+OC_SCAN_ALLOW_FS_APFS
+OC_SCAN_ALLOW_DEVICE_SATA
+OC_SCAN_ALLOW_DEVICE_SASEX
+OC_SCAN_ALLOW_DEVICE_SCSI
+OC_SCAN_ALLOW_DEVICE_NVME
+```
