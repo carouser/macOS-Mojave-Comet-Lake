@@ -164,7 +164,7 @@ A direct link to version [5.15.90](https://www.seagate.com/files/www-content/sup
 
 ### Preventing auto-mount of any undesired partition with known UUID
 
-Use "diskutil list" to obtain "Volume UUID", then use "vifs" to safely edit /etc/fstab.
+Use "diskutil info disk<X>s<Y>" to obtain "Volume UUID", then use "vifs" to safely edit /etc/fstab.
 
 Attention -- the only correct field separator is space (0x20).
 
