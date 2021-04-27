@@ -228,7 +228,8 @@ OC_SCAN_ALLOW_DEVICE_NVME
 
 ```
 # "Grave Accent and Tilde" (0x35) to "Left Shift" (0xE1)
+# "Non-US \ and |" (0x64) to "Grave Accent and Tilde" (0x35)
 # "\ and |" (0x31) to "Return" (0x28)
-# "Non-US \ and |" (0x64) to  "Return" (0x28) -- for "Russian PC" layout
-hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000035,"HIDKeyboardModifierMappingDst":0x7000000E1},{"HIDKeyboardModifierMappingSrc":0x700000031,"HIDKeyboardModifierMappingDst":0x700000028},{"HIDKeyboardModifierMappingSrc":0x700000064,"HIDKeyboardModifierMappingDst":0x700000028}]}'
+# "Right Alt" (0xE6) to "\ and |" (0x31)
+hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000035,"HIDKeyboardModifierMappingDst":0x7000000E1},{"HIDKeyboardModifierMappingSrc":0x700000064,"HIDKeyboardModifierMappingDst":0x700000035},{"HIDKeyboardModifierMappingSrc":0x700000031,"HIDKeyboardModifierMappingDst":0x700000028},{"HIDKeyboardModifierMappingSrc":0x7000000E6,"HIDKeyboardModifierMappingDst":0x700000031}]}'
 ```
