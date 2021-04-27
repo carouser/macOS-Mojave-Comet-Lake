@@ -217,3 +217,16 @@ OC_SCAN_ALLOW_DEVICE_SASEX
 OC_SCAN_ALLOW_DEVICE_SCSI
 OC_SCAN_ALLOW_DEVICE_NVME
 ```
+
+---
+
+If you want to "fix" non-US keyboard on macOS 10.12 and later, use HID remapping:
+
+https://developer.apple.com/library/archive/technotes/tn2450/_index.html
+
+```
+# "Grave Accent and Tilde" (0x35) to "Left Shift" (0xE1)
+# "\ and |" (0x31) to "Return" (0x28)
+# "Non-US \ and |" (0x64) to  "Return" (0x28) -- for "Russian PC" layout
+hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000035,"HIDKeyboardModifierMappingDst":0x7000000E1},{"HIDKeyboardModifierMappingSrc":0x700000031,"HIDKeyboardModifierMappingDst":0x700000028},{"HIDKeyboardModifierMappingSrc":0x700000064,"HIDKeyboardModifierMappingDst":0x700000028}]}'
+```
