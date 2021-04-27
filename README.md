@@ -224,6 +224,8 @@ OC_SCAN_ALLOW_DEVICE_NVME
 
 [Technical Note TN2450](https://developer.apple.com/library/archive/technotes/tn2450/_index.html)
 
+[HID Usage Tables 1.22 PDF](https://usb.org/sites/default/files/hut1_22.pdf)
+
 ```
 # "Grave Accent and Tilde" (0x35) to "Left Shift" (0xE1)
 # "\ and |" (0x31) to "Return" (0x28)
